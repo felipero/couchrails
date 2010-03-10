@@ -1,0 +1,4 @@
+CouchRails is a Object Document Mapper for CouchDB that implements the new Rails 3 ActiveModel.
+It uses CouchRest.
+
+This project is under MIT License
