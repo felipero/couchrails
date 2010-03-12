@@ -5,7 +5,7 @@ begin
 rescue LoadError
   require 'rubygems'
   require 'bundler'
-  Bundler.setup
+#  Bundler.setup
 end
 Bundler.require(:default, :test)
 
