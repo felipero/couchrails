@@ -1,6 +1,4 @@
-module ComplianceTest
-  class CouchDocument
-    extend CouchRails::ActiveModel::ClassMethods
-    include CouchRails::ActiveModel::InstanceMethods
+module Models
+  class Doc < CouchRails::Document
   end
 end
