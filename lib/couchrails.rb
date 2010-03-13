@@ -1,7 +1,9 @@
 require 'active_support'
 require 'active_model'
-require "couchrails/active_model/couchrails_active_model"
+require 'couchrails/active_model'
 
 module CouchRails
-  autoload :AbstractClass, "couch_rails/support/abstract_class"
+  autoload :AbstractClass, "couchrails/support/abstract_class"
+  autoload :Document, "couchrails/core/document"
+  autoload :Config, "couchrails/core/config"
 end

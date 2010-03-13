@@ -16,8 +16,8 @@ $LOAD_PATH.unshift(lib) if File.directory?(lib)
 lib = File.expand_path('../../../rails/activemodel/lib', __FILE__)
 $LOAD_PATH.unshift(lib) if File.directory?(lib)
 require 'active_model/lint'
-
-require "couchrails"
 require "amo_compliance_spec"
 
+require "couchrails"
 require "models"
+

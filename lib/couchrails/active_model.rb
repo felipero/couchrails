@@ -5,7 +5,7 @@ module CouchRails
 
 
     module ClassMethods
-      
+
       # Returns an ActiveModel::Name object for module. It can be
       # used to retrieve all kinds of naming-related information.
       def model_name
@@ -14,7 +14,6 @@ module CouchRails
 
     end
 
-
     module InstanceMethods
 
       def to_model
@@ -22,20 +21,17 @@ module CouchRails
       end
 
       def persisted?
-        false
+        !self.new?
       end
 
       def to_key
-#      key
+        persisted? ? [self["_id"]] : nil
       end
 
       def to_param
-#      return nil if key.nil?
-#      if key.length > 1
-#        raise "You need to implement #to_param yourself to support this key: #{self.class.key.inspect}"
-#      else
-#        self.key.first.to_s
-#      end
+        key = self.to_key
+        return nil if key.nil?
+        key.first.to_s
       end
 
       # Define the minimum requirements if the resource
