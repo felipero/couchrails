@@ -4,11 +4,11 @@ source "http://gems.github.com"
 
 gem "couchrest"
 
-git 'git://github.com/rails/rails.git'
-gem 'activesupport', '~> 3.0.0.beta1', :require => 'active_support'
-gem 'activemodel',   '~> 3.0.0.beta1', :require => 'active_model'
-gem 'actionpack',    '~> 3.0.0.beta1', :require => 'action_pack'
-gem 'railties',      '~> 3.0.0.beta1', :require => 'rails'
+#git 'git://github.com/rails/rails.git'
+gem 'activesupport', '~> 3.0.0.beta3', :require => 'active_support'
+gem 'activemodel',   '~> 3.0.0.beta3', :require => 'active_model'
+gem 'actionpack',    '~> 3.0.0.beta3', :require => 'action_pack'
+gem 'railties',      '~> 3.0.0.beta3', :require => 'rails'
 
 group(:test) do
   gem 'rspec',        '~> 1.3', :require => 'spec'
