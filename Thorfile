@@ -1,16 +1,17 @@
 # enconding: utf-8
-require File.join(File.dirname(__FILE__), "lib", "couchrails", "support", "version")
 require 'rubygems'
 require 'bundler'
+
+Bundler.setup
+Bundler.require(:default, :development)
+
+require File.join(File.dirname(__FILE__), "lib", "couchrails", "support", "version")
 require 'thor/rake_compat'
 require 'spec/rake/spectask'
 begin
   require 'rdoc/task'
 rescue LoadError
 end
-
-Bundler.setup
-Bundler.require(:default, :development)
 
 GEM_NAME = 'couchrails'
 EXTRA_RDOC_FILES = ["README", "LICENSE", "CHANGELOG.rdoc", "VERSION", "Thorfile"]
