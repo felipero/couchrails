@@ -3,7 +3,12 @@ module CouchRails
     extend CouchRails::ActiveModel::ClassMethods
     include CouchRails::ActiveModel::InstanceMethods
 
-    use_database CouchRails::Config.db_for(self.model_name.plural)
+    def self.db(db_name = self.model_name.plural)
+      self.use_database CouchRails::Config.db_for(db_name)
+    end
 
+    def initialize
+      self.class.db
+    end
   end
 end
