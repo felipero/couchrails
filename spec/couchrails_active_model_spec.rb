@@ -8,7 +8,6 @@ describe 'An active_model compliant CouchRails::ActiveModel' do
 
   after :all do
     db = @model.database
-    puts db.name
     db.delete! if db
   end
 
@@ -35,9 +34,19 @@ describe 'An active_model compliant CouchRails::ActiveModel' do
       @model.to_key.should be_nil
     end
 
-    it "should allow user specify which field will be the key"
-    it "should return the value of the specified key when object is persisted"
-    it "should return nil when the oject is new, even when there is a field specified as the key"
+    it "should allow user specify which field will be the key" do
+      @model = Models::DocWithKey.new
+      @model.name = 'felipe'
+      @model.save!
+      @model.to_key.should == ['felipe']
+      @model.to_param.should == 'felipe'
+    end
+
+    it "should return nil when the object is new, even when there is a field specified as the key" do
+      @model.save!
+      @model["_id"] = nil
+      @model.to_key.should == [nil]
+    end
 
   end
 

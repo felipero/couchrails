@@ -6,6 +6,8 @@ module CouchRails
 
     module ClassMethods
 
+      attr_accessor :key
+
       # Returns an ActiveModel::Name object for module. It can be
       # used to retrieve all kinds of naming-related information.
       def model_name
@@ -25,7 +27,7 @@ module CouchRails
       end
 
       def to_key
-        persisted? ? [self["_id"]] : nil
+        persisted? ? [self[self.class.key]] : nil
       end
 
       def to_param
