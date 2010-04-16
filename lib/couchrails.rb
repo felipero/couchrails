@@ -1,6 +1,7 @@
 require 'active_support'
 require 'active_model'
 require 'couchrails/active_model'
+require 'couchrest'
 
 module CouchRails
   autoload :AbstractClass, "couchrails/support/abstract_class"
