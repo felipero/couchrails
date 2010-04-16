@@ -39,6 +39,31 @@ Gem::Specification.new do |s|
      "spec/couchrails_active_model_spec.rb",
      "spec/models.rb",
      "spec/spec_helper.rb",
+     "examples/helloworld/app/controllers/application_controller.rb",
+     "examples/helloworld/app/controllers/posts_controller.rb",
+     "examples/helloworld/app/helpers/application_helper.rb",
+     "examples/helloworld/app/helpers/posts_helper.rb",
+     "examples/helloworld/app/models/post.rb",
+     "examples/helloworld/config/application.rb",
+     "examples/helloworld/config/boot.rb",
+     "examples/helloworld/config/environment.rb",
+     "examples/helloworld/config/environments/development.rb",
+     "examples/helloworld/config/environments/production.rb",
+     "examples/helloworld/config/environments/test.rb",
+     "examples/helloworld/config/initializers/backtrace_silencers.rb",
+     "examples/helloworld/config/initializers/inflections.rb",
+     "examples/helloworld/config/initializers/mime_types.rb",
+     "examples/helloworld/config/initializers/secret_token.rb",
+     "examples/helloworld/config/initializers/session_store.rb",
+     "examples/helloworld/config/routes.rb",
+     "examples/helloworld/db/migrate/20100416020456_create_posts.rb",
+     "examples/helloworld/db/seeds.rb",
+     "examples/helloworld/test/functional/posts_controller_test.rb",
+     "examples/helloworld/test/performance/browsing_test.rb",
+     "examples/helloworld/test/test_helper.rb",
+     "examples/helloworld/test/unit/helpers/posts_helper_test.rb",
+     "examples/helloworld/test/unit/post_test.rb",
+     "examples/post_example.rb",
      "spec/spec.opts"
   ]
 
@@ -47,9 +72,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<couchrest>, [">= 0.37"])
     else
+      s.add_dependency(%q<couchrest>, [">= 0.37"])
     end
   else
+    s.add_dependency(%q<couchrest>, [">= 0.37"])
   end
 end
 
