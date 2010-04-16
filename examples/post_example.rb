@@ -15,6 +15,6 @@ post.content =  "This is just an example of using CouchRails. Still under develo
 
 puts "Saved!" if post.save!
 
-puts "Please check your couchDB installation, you might found on record"
+puts "Please check your couchDB installation, you might find one record"
 
 puts "bye!"
