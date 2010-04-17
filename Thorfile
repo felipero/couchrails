@@ -49,6 +49,7 @@ class Default < Thor
   begin
     require 'jeweler'
     Jeweler::Tasks.new do |g|
+	  g.add_dependency('couchrest', '>= 0.37')
       g.name = GEM_NAME
       g.version = CouchRails::VERSION
       g.summary = "A Object Document Mapper for Rails 3 that implements ActiveModel"
