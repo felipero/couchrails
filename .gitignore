@@ -1,2 +1,5 @@
 .bundle/
 .idea/
+*.gemspec
+*.gem
+pkg/
