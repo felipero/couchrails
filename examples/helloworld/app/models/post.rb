@@ -1,6 +1,8 @@
 class Post < CouchRails::Document
 
-  view_by :title
-  property :title
-  property :content
+    property :title
+    property :content
+    property :Comments, :cast_as => 'Comment'
+
+    timestamps!
 end
