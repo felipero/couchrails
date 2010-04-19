@@ -74,6 +74,13 @@ module Rails
         return 'DateTime' if type.to_s == 'datetime'
         return type.to_s.camelcase
       end
+	  def declaration
+        declaration = @name
+        declaration << ", :cast_as => '#{@type}'" unless self.default and !self.default.empty?
+        declaration
+      end
+
+		
     end
   end
 

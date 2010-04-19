@@ -1,7 +1,7 @@
 class <%= class_name %> < <%= options[:parent] != nil ? options[:parent].classify : 'CouchRails::Document' %>
 
 <% attributes.each do |attribute| -%>
-    property :<%= attribute.name -%>, <%= ":cast_as => '#{attribute.type_class}'" if attribute.type %>
+    property :<%= attribute.declaration %>
 <% end %>
     timestamps!
 end
