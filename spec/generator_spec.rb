@@ -24,5 +24,4 @@ describe "Generator integration" do
 		create_generator("married", "boolean").declaration.should be == "married"
 		create_generator("salary", "float").declaration.should be == "salary"
 	end
-
 end
