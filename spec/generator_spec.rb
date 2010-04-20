@@ -20,8 +20,11 @@ describe "Generator integration" do
 	
 	it "should return default values for common primitive types" do
 		create_generator("name", "string").declaration.should be == "name"
-		create_generator("age", "int").declaration.should be == "age"
 		create_generator("married", "boolean").declaration.should be == "married"
 		create_generator("salary", "float").declaration.should be == "salary"
+	end
+
+	it "should not fail with integer types" do
+		create_generator("age","integer").declaration.should be == "age"
 	end
 end

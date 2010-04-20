@@ -75,8 +75,9 @@ module Rails
         return type.to_s.camelcase
       end
 	  def declaration
+		puts "default: #{self.default}"
         declaration = @name
-        declaration << ", :cast_as => '#{@type}'" unless self.default and !self.default.empty?
+        declaration << ", :cast_as => '#{@type}'" unless !self.default.to_s.empty?
         declaration
       end
 
