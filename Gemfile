@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 source "http://gems.github.com"
 
 gem "couchrest"
+gem "ZenTest"
 
 #git 'git://github.com/rails/rails.git'
 gem 'activesupport', '~> 3.0.0.beta3', :require => 'active_support'
