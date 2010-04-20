@@ -30,6 +30,7 @@ describe "Generator integration" do
 
   it "should not fail with date / time types" do
     create_generator("birthday","datetime").declaration.should be == "birthday"
+    create_generator("birthday","date").declaration.should be == "birthday"
   end
 
 end
