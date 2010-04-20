@@ -21,3 +21,5 @@ require "amo_compliance_spec"
 require "couchrails"
 require "models"
 
+require 'active_support/core_ext' # Active_support extensions
+

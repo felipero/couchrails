@@ -70,18 +70,11 @@ module Rails
 
   module Generators
     class GeneratedAttribute #:nodoc:
-      def type_class
-        return 'DateTime' if type.to_s == 'datetime'
-        return type.to_s.camelcase
-      end
-	  def declaration
-		puts "default: #{self.default}"
+      def declaration
         declaration = @name
         declaration << ", :cast_as => '#{@type}'" unless !self.default.to_s.empty?
         declaration
       end
-
-		
     end
   end
 
