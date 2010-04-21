@@ -21,6 +21,7 @@ describe 'An active_model compliant CouchRails::ActiveModel' do
 
     it "should not be persisted when created" do
       @model.persisted?.should be_false
+      
     end
   end
 
@@ -71,6 +72,14 @@ describe 'An active_model compliant CouchRails::ActiveModel' do
       CouchRails::Config.db_map = {:models_docs => :documents}
       @model = Models::Doc.new
       @model.database.name.should == 'documents'
+    end
+  end
+
+  describe "validations" do
+    it "should not allow saving a model registered with validations" do
+      @model = Models::DocWithValidations.new
+      @model.save.should be false
+      
     end
   end
 

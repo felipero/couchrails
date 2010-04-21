@@ -1,7 +1,12 @@
 module CouchRails
   class Document < CouchRest::ExtendedDocument
-    extend CouchRails::ActiveModel::ClassMethods
-    include CouchRails::ActiveModel::InstanceMethods
+    extend CouchRails::ActiveModel::Naming::ClassMethods
+    include CouchRails::ActiveModel::Naming::InstanceMethods
+    include CouchRails::ActiveModel::Validations
+
+    def read_attribute_for_validation(key)
+      @attributes[key]
+    end
 
     def self.db(db_name = self.model_name.plural)
       self.use_database CouchRails::Config.db_for(db_name)

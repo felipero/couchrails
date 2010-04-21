@@ -8,4 +8,10 @@ module Models
     
     use_key :name
   end
+
+  class DocWithValidations < CouchRails::Document
+    property :name
+    validates_presence_of :name
+  end
 end
+
