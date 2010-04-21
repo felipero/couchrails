@@ -2,6 +2,7 @@ require 'active_model/naming'
 
 module CouchRails
   module ActiveModel
+
     module Naming
 
       module ClassMethods
@@ -60,7 +61,8 @@ module CouchRails
 
         end
       end
-      end
+
+    end
 
   end
 
