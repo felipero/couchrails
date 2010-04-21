@@ -14,6 +14,7 @@ gem 'railties',      '~> 3.0.0.beta3', :require => 'rails'
 group(:test) do
   gem 'rspec',        '~> 1.3', :require => 'spec'
   gem 'test-unit',    '1.2.3'
+  gem 'autotest-growl'
 end
 
 group(:development) do
