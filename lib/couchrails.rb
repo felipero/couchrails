@@ -1,7 +1,6 @@
 require 'active_support'
 require 'active_model'
-require 'couchrails/active_model/naming'
-require 'couchrails/active_model/validation'
+require 'couchrails/active_model'
 require 'couchrest'
 
 module CouchRails

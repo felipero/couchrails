@@ -75,12 +75,5 @@ describe 'An active_model compliant CouchRails::ActiveModel' do
     end
   end
 
-  describe "validations" do
-    it "should not allow saving a model registered with validations" do
-      @model = Models::DocWithValidations.new
-      @model.save.should be false
-      
-    end
-  end
 
 end
