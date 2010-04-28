@@ -4,5 +4,4 @@ class Post < CouchRails::Document
     property :content
     property :Comments, :cast_as => 'Comment'
 
-    timestamps!
 end

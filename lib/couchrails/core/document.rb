@@ -1,6 +1,7 @@
 module CouchRails
   class Document < CouchRest::ExtendedDocument 
     extend CouchRails::Naming::ClassMethods
+    extend CouchRails::Associations::ClassMethods
     include CouchRails::Naming::InstanceMethods
     include CouchRails::Validations
 
