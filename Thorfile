@@ -5,7 +5,7 @@ require 'bundler'
 Bundler.setup
 Bundler.require(:default, :development)
 
-require File.join(File.dirname(__FILE__), "lib", "couchrails", "support", "version")
+require File.join(File.dirname(__FILE__), "lib", "couch_rails", "support", "version")
 require 'thor/rake_compat'
 require 'spec/rake/spectask'
 begin

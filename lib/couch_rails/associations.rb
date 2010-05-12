@@ -1,8 +1,10 @@
-
-
 module CouchRails
   module Associations
 
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
+    
     module ClassMethods
       def has_one(document, options ={})
         

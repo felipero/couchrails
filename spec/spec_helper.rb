@@ -18,7 +18,7 @@ $LOAD_PATH.unshift(lib) if File.directory?(lib)
 require 'active_model/lint'
 require "amo_compliance_spec"
 
-require "couchrails"
+require "couch_rails"
 require "models"
 
 require 'active_support/core_ext' # Active_support extensions
