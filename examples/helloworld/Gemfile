@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
 
-gem 'couchrails'
+gem 'couchrails', :git => 'git://github.com/felipero/couchrails.git'
 
 gem 'rspec'
 gem 'ZenTest'

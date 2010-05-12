@@ -1,6 +1,5 @@
 .bundle/
 .idea/
-*.gemspec
 *.gem
 pkg/
 *.swp
