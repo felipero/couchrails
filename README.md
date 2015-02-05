@@ -1,6 +1,8 @@
 CouchRails is a Object Document Mapper for CouchDB that implements the new Rails 3 ActiveModel.
 It uses CouchRest.
 
+[![Code Climate](https://codeclimate.com/github/felipero/couchrails/badges/gpa.svg)](https://codeclimate.com/github/felipero/couchrails)
+
 Here are what it does right now:
 
 CouchRails::Config
